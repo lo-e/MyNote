@@ -9,6 +9,7 @@
 #import "NoteCollectionViewCell.h"
 #import "Note.h"
 #import "NoteContainerView.h"
+#import "PureLayout.h"
 
 @interface NoteCollectionViewCell ()
 
@@ -51,9 +52,11 @@
 - (void) showDelete {
 
     if ( !_deleteView ) {
-        _deleteView = [[UIImageView alloc] initWithFrame:CGRectMake((self.width-20)/2.f, (self.height-20)/2.f, 20, 20)];
+        _deleteView = [[UIImageView alloc] init];
         [_deleteView setImage:[UIImage imageNamed:@"delete.png"]];
         [self addSubview:_deleteView];
+        [_deleteView autoSetDimensionsToSize:CGSizeMake(20, 20)];
+        [_deleteView autoCenterInSuperview];
     }
     _deleteView.hidden = NO;
 

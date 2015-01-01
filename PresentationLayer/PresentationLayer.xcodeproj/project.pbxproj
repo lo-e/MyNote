@@ -44,6 +44,9 @@
 		D2CE458519B03FC70071A129 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D2CE458419B03FC70071A129 /* Main.storyboard */; };
 		D2D03EF719CAB3F800D23798 /* write.png in Resources */ = {isa = PBXBuildFile; fileRef = D2D03EF619CAB3F800D23798 /* write.png */; };
 		D2F1E5DE19CC0859009B61B7 /* searchBar.png in Resources */ = {isa = PBXBuildFile; fileRef = D2F1E5DD19CC0859009B61B7 /* searchBar.png */; };
+		DA1242101A55645D000662AC /* ALView+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA1242081A55645D000662AC /* ALView+PureLayout.m */; };
+		DA1242111A55645D000662AC /* NSArray+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA12420A1A55645D000662AC /* NSArray+PureLayout.m */; };
+		DA1242121A55645D000662AC /* NSLayoutConstraint+PureLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DA12420C1A55645D000662AC /* NSLayoutConstraint+PureLayout.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -113,6 +116,15 @@
 		D2CE458419B03FC70071A129 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Main.storyboard; path = ../Main.storyboard; sourceTree = "<group>"; };
 		D2D03EF619CAB3F800D23798 /* write.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = write.png; sourceTree = "<group>"; };
 		D2F1E5DD19CC0859009B61B7 /* searchBar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = searchBar.png; sourceTree = "<group>"; };
+		DA1242071A55645D000662AC /* ALView+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "ALView+PureLayout.h"; path = "PureLayout/ALView+PureLayout.h"; sourceTree = "<group>"; };
+		DA1242081A55645D000662AC /* ALView+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "ALView+PureLayout.m"; path = "PureLayout/ALView+PureLayout.m"; sourceTree = "<group>"; };
+		DA1242091A55645D000662AC /* NSArray+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSArray+PureLayout.h"; path = "PureLayout/NSArray+PureLayout.h"; sourceTree = "<group>"; };
+		DA12420A1A55645D000662AC /* NSArray+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSArray+PureLayout.m"; path = "PureLayout/NSArray+PureLayout.m"; sourceTree = "<group>"; };
+		DA12420B1A55645D000662AC /* NSLayoutConstraint+PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "NSLayoutConstraint+PureLayout.h"; path = "PureLayout/NSLayoutConstraint+PureLayout.h"; sourceTree = "<group>"; };
+		DA12420C1A55645D000662AC /* NSLayoutConstraint+PureLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = "NSLayoutConstraint+PureLayout.m"; path = "PureLayout/NSLayoutConstraint+PureLayout.m"; sourceTree = "<group>"; };
+		DA12420D1A55645D000662AC /* PureLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayout.h; path = PureLayout/PureLayout.h; sourceTree = "<group>"; };
+		DA12420E1A55645D000662AC /* PureLayout+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "PureLayout+Internal.h"; path = "PureLayout/PureLayout+Internal.h"; sourceTree = "<group>"; };
+		DA12420F1A55645D000662AC /* PureLayoutDefines.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = PureLayoutDefines.h; path = PureLayout/PureLayoutDefines.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -180,6 +192,7 @@
 		D2B1540A19C9A8500051D69A /* OpenSource */ = {
 			isa = PBXGroup;
 			children = (
+				DA1242061A556423000662AC /* PureLayout */,
 				D2B1540E19C9A8800051D69A /* DTNavigationController.h */,
 				D2B1540F19C9A8800051D69A /* DTNavigationController.m */,
 				D2B1540B19C9A8760051D69A /* CHTCollectionViewWaterfallLayout.h */,
@@ -302,6 +315,22 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		DA1242061A556423000662AC /* PureLayout */ = {
+			isa = PBXGroup;
+			children = (
+				DA1242071A55645D000662AC /* ALView+PureLayout.h */,
+				DA1242081A55645D000662AC /* ALView+PureLayout.m */,
+				DA1242091A55645D000662AC /* NSArray+PureLayout.h */,
+				DA12420A1A55645D000662AC /* NSArray+PureLayout.m */,
+				DA12420B1A55645D000662AC /* NSLayoutConstraint+PureLayout.h */,
+				DA12420C1A55645D000662AC /* NSLayoutConstraint+PureLayout.m */,
+				DA12420D1A55645D000662AC /* PureLayout.h */,
+				DA12420E1A55645D000662AC /* PureLayout+Internal.h */,
+				DA12420F1A55645D000662AC /* PureLayoutDefines.h */,
+			);
+			name = PureLayout;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -413,14 +442,17 @@
 				D248EB6A19C57F8F00BB8561 /* NoteContainerView.m in Sources */,
 				D2CE454F19B03CD70071A129 /* AppDelegate.m in Sources */,
 				D2B1541B19C9B2750051D69A /* AddSupplementView.m in Sources */,
+				DA1242101A55645D000662AC /* ALView+PureLayout.m in Sources */,
 				D248EB7619C5978500BB8561 /* StartViewController.m in Sources */,
 				D2B1540D19C9A8760051D69A /* CHTCollectionViewWaterfallLayout.m in Sources */,
 				D2B1541719C9ADA40051D69A /* NoteCollectionView.m in Sources */,
 				D2B1541019C9A8800051D69A /* DTNavigationController.m in Sources */,
 				D2A959E719C6C7850083E9ED /* BaseNavigationController.m in Sources */,
+				DA1242121A55645D000662AC /* NSLayoutConstraint+PureLayout.m in Sources */,
 				D2B1542319C9D6A10051D69A /* AddNoteCollectionViewCell.m in Sources */,
 				D2B1541419C9AD880051D69A /* BaseCollectionView.m in Sources */,
 				D2CE454B19B03CD70071A129 /* main.m in Sources */,
+				DA1242111A55645D000662AC /* NSArray+PureLayout.m in Sources */,
 				D248EB7C19C5998200BB8561 /* NoteCollectionViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

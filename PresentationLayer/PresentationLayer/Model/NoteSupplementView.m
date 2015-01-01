@@ -76,7 +76,7 @@
 
     _mode = mode;
     if ( _mode == NoteSupplementModeAddNote ) {
-        [self.contentTextView performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.3];
+        [self.contentTextView performSelector:@selector(becomeFirstResponder) withObject:nil afterDelay:0.6];
     }
 
 }
